@@ -46,7 +46,7 @@ func make_maze():
 			var next = neighbors[randi() % neighbors.size()]
 			stack.append(current)
 			var dir = next - current
-			var current_walls = Map.get_cellv(next) - cell_walls[dir]
+			var current_walls = Map.get_cellv(current) - cell_walls[dir]
 			var next_walls = Map.get_cellv(next) - cell_walls[-dir]
 			Map.set_cellv(current, current_walls)
 			Map.set_cellv(next, next_walls)
